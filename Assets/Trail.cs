@@ -25,9 +25,9 @@ public class Trail : MonoBehaviour {
 
 	}
 
-	void LookAt2D(Vector3 target)
+	void LookAt2D(Vector3 lookAt)
 	{
-		Vector3 dir = target - transform.position;
+		Vector3 dir = lookAt - transform.position;
 		float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
 		var targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
